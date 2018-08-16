@@ -25,5 +25,8 @@ describe('Keypad', () => {
   it('renders the values of operators', () => {
     wrapper.setProps({numbers: ['+', '-', '%', '/']});
     expect(wrapper.find('.numbers-container').text()).toEqual('+-%/');
-  })
+  });
+  it('should render an instance of the Key component', () => {
+    expect(wrapper.find('Key').length).toEqual(1);
+  });
 });
