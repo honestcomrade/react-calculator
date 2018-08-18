@@ -9,20 +9,38 @@ class Calculator extends Component {
     this.state = {
       displayValue: '0',
       numbers: ['9', '8', '7', '6', '5', '4', '3', '2', '1', '0', '.', 'ce'],
-      operators: ['/', 'x', '-', '+', '%'],
+      operators: ['/', 'x', '-', '+'],
       selectedOperator: '',
       storedValue: ''
     }
+
+    this.updateDisplay = this.updateDisplay.bind(this);
   };
 
-  callOperator() {
-    console.log('Call operation');
+  callOperator(props) {
+    console.log('Call operation - ', props);
   }
-  setOperator() {
-    console.log('Set operation');
+  setOperator(props) {
+    console.log('Set operation - ', props);
   }
-  updateDisplay() {
-    console.log('Update display');
+  updateDisplay(value) {
+    let { displayValue } = this.state;
+    // prevent multiple '.'
+    if (value === '.' && displayValue.includes('.')) {
+      value = '';
+    }
+
+    if (value === 'ce') {
+      // delete last char from displayValue
+      displayValue = displayValue.substr(0, displayValue.length - 1);
+      // set displayValue to '0' if displayValue is emplty string
+      if (displayValue === '') {
+        displayValue = '0'
+      } 
+    } else {
+      displayValue === '0' ? displayValue = value : displayValue += value;
+    }
+    this.setState({displayValue})
   }
   render() {
     const { displayValue, numbers, operators } = this.state;

@@ -18,11 +18,11 @@ const Keypad = ({callOperator, numbers, operators, setOperator, updateDisplay}) 
   operators = operators.map(operator => {
     return (
       <Key 
-      key={operator}
-      keyAction={setOperator}
-      keyType="operator-key"
-      keyValue={operator}
-    />
+        key={operator}
+        keyAction={setOperator}
+        keyType="operator-key"
+        keyValue={operator}
+      />
     );
   });
 

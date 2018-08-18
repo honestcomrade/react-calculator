@@ -44,7 +44,6 @@ ShallowWrapper {
                               "x",
                               "-",
                               "+",
-                              "%",
                             ]
           }
           setOperator={[Function]}
@@ -91,7 +90,6 @@ ShallowWrapper {
             "x",
             "-",
             "+",
-            "%",
           ],
           "setOperator": [Function],
           "updateDisplay": [Function],
@@ -137,7 +135,6 @@ ShallowWrapper {
                                     "x",
                                     "-",
                                     "+",
-                                    "%",
                                   ]
             }
             setOperator={[Function]}
@@ -184,7 +181,6 @@ ShallowWrapper {
               "x",
               "-",
               "+",
-              "%",
             ],
             "setOperator": [Function],
             "updateDisplay": [Function],

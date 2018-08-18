@@ -59,7 +59,7 @@ describe('mounted Keypad', () => {
     expect(wrapper.find('.numbers-container').text()).toEqual('012');
   });
   it('renders the values of operators to the DOM', () => {
-    wrapper.setProps({operators:['+', '-', '%', '/']});
-    expect(wrapper.find('.operators-container').text()).toEqual('+-%/');
+    wrapper.setProps({operators:['+', '-', '*', '/']});
+    expect(wrapper.find('.operators-container').text()).toEqual('+-*/');
   });
 });
